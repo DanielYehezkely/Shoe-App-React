@@ -1,0 +1,20 @@
+@media (max-width: 768px) {
+
+    #home {
+        background: url('/public/assets/photo-1577208288347-b24488f3efa5.jpg') no-repeat ;
+        background-size: cover;
+    }
+
+    #home h1 {
+        font-size: 6rem;
+    }
+
+    #home p {
+        font-size: 2rem;
+    }
+
+    #home button {
+        width: 40%;
+        margin-top: 10rem;
+    }
+}
