@@ -64,6 +64,11 @@
   }
 }
 /* ====================== shared layout =================================== */
+
+.active {
+  color: red;
+} 
+
 .container {
   height: 100vh;
   display: flex;
@@ -154,3 +159,72 @@ footer {
   height: 35rem;
   width: 35rem;
 }
+
+/* ================Add shoe form styles ===========================  */
+
+
+.form-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+
+.form-label {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+
+.form-control {
+  margin-bottom: 15px;
+}
+
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+.edit-link {
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+/* ======== Shoe page ============ */
+
+.shoe-detail-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.shoe-details {
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.delete-btn {
+background-color: rgba(232, 73, 73, 0.511);
+border: none;
+border-radius: 1rem;
+width: 10rem;
+height: 2rem;
+}
+
+/* ======================Edit shoe ====================== */
+
+.edit-shoe-container {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  height: 40rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+

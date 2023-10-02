@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import baseUrl from '../api';
 import { Link, useParams } from 'react-router-dom';
+
+import axios from 'axios';
+
+import baseUrl from '../api';
 
 const Shoe = () => {
   const { shoeId } = useParams();
@@ -23,17 +26,28 @@ const Shoe = () => {
     return <div>Loading...</div>;
   }
 
+  const handleDelete = async () => {
+    try {
+      await axios.delete(`/shoes/${shoeId}`);
+      
+    } catch (error) {
+      console.error('Error deleting shoe:', error);
+    }
+  };
+
   return (
     <div className="shoe-detail-container">
-    <img class='shoe-image'  src={shoe.img} alt={shoe.name} />
-      <h2>{shoe.name}</h2>
+    <img className='shoe-image'  src={shoe.img} alt={shoe.name} />
       <div className="shoe-details">
-        <span className="shoe-price">${shoe.price}</span>
+      <h2  >{shoe.name}</h2>
+        <span >${shoe.price}</span>
       </div>
 
       <Link to={`/shoes/${shoeId}/edit`} className="edit-link">
         Edit shoe
       </Link>
+
+      <button className='delete-btn' onClick={handleDelete}> Delete Shoe</button>
     </div>
   );
 };

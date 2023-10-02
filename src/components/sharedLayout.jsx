@@ -14,19 +14,19 @@ const SharedLayout = ({ user }) => {
         <ul className="nav-links">
           <li>
             <NavLink
-              to="/"
+              to="home"
               className={({ isActive }) => isActive ? 'active' : undefined}
             >Home</NavLink>
           </li>
           <li>
             <NavLink
-              to="/add"
+              to= "add"
               className={({ isActive }) => isActive ? 'active' : undefined}
             >Add Shoe</NavLink>
           </li>
           <li>
             <NavLink
-              to="/add"
+              to="/"
               className={({ isActive }) => isActive ? 'active' : undefined}
             >Shoes</NavLink>
           </li>
